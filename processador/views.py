@@ -120,19 +120,19 @@ class UploadImagemView(APIView):
             # Classificar a imagem (processamento em memória)
             resultado, probabilidade = classificar_imagem(imagem_file)
             
-            # Salvar apenas o resultado no banco (sem a imagem)
-            instancia = ImagemUpload.objects.create(
-                resultado=resultado,
-                probabilidade=probabilidade
-            )
+            # # Salvar apenas o resultado no banco (sem a imagem)
+            # instancia = ImagemUpload.objects.create(
+            #     resultado=resultado,
+            #     probabilidade=probabilidade
+            # )
             
             # Preparar resposta
             resposta_data = {
-                'id': instancia.id,
+                # 'id': instancia.id,
                 'resultado': resultado,
-                'probabilidade': probabilidade,
+                # 'probabilidade': probabilidade,
                 'mensagem': f"Classificação: {'COM cinto' if resultado == 'com_cinto' else 'SEM cinto'}",
-                'enviado_em': instancia.enviado_em
+                # 'enviado_em': instancia.enviado_em
             }
             
             return Response(resposta_data, status=status.HTTP_201_CREATED)
