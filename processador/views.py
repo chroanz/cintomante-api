@@ -1,4 +1,5 @@
 import numpy as np
+import random
 from PIL import Image
 from pathlib import Path
 from rest_framework import status
