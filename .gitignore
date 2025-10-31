@@ -1,0 +1,20 @@
+# Ambiente Virtual
+venv/
+
+# Arquivos de cache do Python
+__pycache__/
+*.pyc
+
+# Banco de dados de desenvolvimento
+db.sqlite3
+
+# Arquivos de mídia enviados pelos usuários
+media/
+
+# Arquivos de configuração de editores
+.vscode/
+.idea/
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
